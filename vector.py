@@ -1,7 +1,6 @@
 import os
 import sys
 from dotenv import load_dotenv
-
 import chromadb
 from langchain_chroma import Chroma
 from langchain_community.document_loaders import PyPDFLoader
