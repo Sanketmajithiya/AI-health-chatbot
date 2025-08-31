@@ -1,5 +1,8 @@
 import streamlit as st
-from chatbot import get_bot_response
+
+# 🔄 Show spinner while loading model and retriever
+with st.spinner("🔄 Please wait, loading AI model and medical data..."):
+    from chatbot import get_bot_response  # ✅ Slow import wrapped in spinner
 
 # Page setup
 st.set_page_config(page_title="Sanket Chatbot", page_icon="🩺")
@@ -23,7 +26,7 @@ st.markdown(
     }
 
     .footer span {
-        color: #C084FC; /* soft purple */
+        color: #C084FC;
         font-weight: bold;
         text-shadow: 0px 0px 4px rgba(192,132,252,0.4);
     }
