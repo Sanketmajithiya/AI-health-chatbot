@@ -2,7 +2,7 @@ import os
 import sys
 from dotenv import load_dotenv
 import chromadb
-from langchain_chroma import Chroma
+from langchain_community.vectorstores import Chroma
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings  # HuggingFace import karo
@@ -11,6 +11,8 @@ from langchain_community.embeddings import HuggingFaceEmbeddings  # HuggingFace 
 load_dotenv()
 
 pdf_path = "medical_books/"
+if not os.path.exists(pdf_path):
+    raise FileNotFoundError("The 'medical_books' directory was not found. Please ensure it exists and contains PDFs.")
 documents = []
 
 sys.stderr = open(os.devnull, "w")  # Hide chromadb output
