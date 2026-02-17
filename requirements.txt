@@ -1,0 +1,19 @@
+streamlit
+chromadb
+langchain
+python-dotenv
+pdfplumber
+pdfminer.six
+groq
+langchain_community
+langchain_core
+tiktoken
+sentence-transformers
+openai
+langchain_openai
+langchain-text-splitters
+<<<<<<< HEAD
+langchain_groq
+=======
+langchain_groq
+>>>>>>> be6ad72 (Fresh deploy with LFS)
